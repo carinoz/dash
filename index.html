@@ -20,32 +20,58 @@
 </header>
 		<div id="sidr" class="side-nav">
 			<ul>
-				<li class="active"><a href="index.html">Pelunasan Tagihan</a></li>
-				<li><a href="index2.html">Data Pelanggan</a></li>
+				<li><a href="index.html">Pelunasan Tagihan</a></li>
+				<li class="active"><a href="index2.html">Data Pelanggan</a></li>
 			</ul>
 		</div>
 		<section class="chart-row">
-			<h4>PELUNASAN TAGIHAN<span>(Dalam Triliun Rupiah)</span></h4>
+			<h4>DAYA TERSAMBUNG</h4>
 			<div class="chart-chart">
 				<div id="canvas-holder">
-					<canvas id="pelunasan-tagihan" width="500" height="500" />
+					<canvas id="data-tersambung" width="500" height="500" />
 				</div>
 			</div>
 			<div class="chart-main-content row">
 				<div class="small-6 columns">
-					<h3>1,74 T</h3>
+					<h3>81.56%</h3>
 					<p class="post-paid">POST PAID</p>
 				</div>
 				<div class="small-6 columns">
-					<h3>0,53 T</h3>
+					<h3>18.44%</h3>
 					<p class="pre-paid">PRE PAID</p>
 				</div>
 			</div>
 			<div class="chart-content row">
 				<ul>
 					<li>
-						<label>NON TAGLIS</label>
-						<p>0,18 T</p>
+						<label>DAYA TERSAMBUNG</label>
+						<p>96,133.69 MVA</p>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<section class="chart-row">
+			<h4>DATA PELANGGAN</h4>
+			<div class="chart-chart">
+				<div id="canvas-holder">
+					<canvas id="data-pelanggan" width="500" height="500" />
+				</div>
+			</div>
+			<div class="chart-main-content row">
+				<div class="small-6 columns">
+					<h3>71.59%</h3>
+					<p class="post-paid">POST PAID</p>
+				</div>
+				<div class="small-6 columns">
+					<h3>28.41%</h3>
+					<p class="pre-paid">PRE PAID</p>
+				</div>
+			</div>
+			<div class="chart-content row">
+				<ul>
+					<li>
+						<label>TOTAL PELANGGAN</label>
+						<p>55.89 Juta</p>
 					</li>
 				</ul>
 			</div>
@@ -59,29 +85,39 @@
 	    	});
 	    </script>
 	    <script>
-			var doughnutData = [
+			var dataTersambung = [
 				{
-					value: 1.74,
+					value: 81.56,
 					color:"#F7464A",
 					highlight: "#FF5A5E",
 					label: "Post Paid"
 				},
 				{
-					value: 0.18,
+					value: 18.44,
 					color: "#46BFBD",
 					highlight: "#5AD3D1",
 					label: "Pre Paid"
+				}
+			];
+			var dataPelanggan = [
+				{
+					value: 71.59,
+					color:"#F7464A",
+					highlight: "#FF5A5E",
+					label: "Post Paid"
 				},
 				{
-					value: 0.53,
-					color: "#FDB45C",
-					highlight: "#FFC870",
-					label: "Non Taglis"
+					value: 28.41,
+					color: "#46BFBD",
+					highlight: "#5AD3D1",
+					label: "Pre Paid"
 				}
 			];
 			window.onload = function(){
-				var ctx = document.getElementById("pelunasan-tagihan").getContext("2d");
-				window.myDoughnut = new Chart(ctx).Doughnut(doughnutData, {responsive : true});
+				var ctx = document.getElementById("data-tersambung").getContext("2d");
+				var myDoughnut = new Chart(ctx).Doughnut(dataTersambung, {responsive : true});
+				var ctx2 = document.getElementById("data-pelanggan").getContext("2d");
+				var mySecondDoughnut = new Chart(ctx2).Doughnut(dataPelanggan, {responsive : true});
 			};
 		</script>
 	</body>
