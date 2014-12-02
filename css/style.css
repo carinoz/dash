@@ -48,6 +48,8 @@ header{display: block; position:relative;}
 header{background:#bb0804; height:90px; padding:15px; box-shadow:0 2px 2px rgba(0,0,0,.2);}
 header .logo{position:absolute; left:0; margin:0 15px;}
 header .header-title{font-family:'lato', helvetica, sans-serif; color:#fff; font-weight:bold; font-size:24px; text-align:center; margin:15px;}
+.side-nav ul li a{color:#fff !important;}
+
 .chart-row{padding:15px;}
 .chart-row h4{font-family:'lato', helvetica, sans-serif; font-size:18px; text-align:center; margin:20px 0 40px;}
 .chart-row h4 span{display:block; font-size:14px; margin:10px 0;}
